@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <title>Recol - DRE</title>
+  </head>
+  <body class="bg-[#2e4463]">
+    <!-- Header -->
+    <div class="bg-[#1e293b] flex justify-between py-4 px-6">
+      <div class="text-center">
+        <h1 class="text-[#efefef] text-[2.25rem]">Demonstração Financeira</h1>
+      </div>
+      <div class="flex items-center gap-4">
+        <h1 class="text-white">Bem vindo, (Usuário)!</h1>
+        <div class="bg-rose-500 w-[48px] text-center rounded-[50%] h-[48px]">
+          <h1 class="text-white pt-3">J</h1>
+        </div>
+        <i
+          class="text-white text-2xl ph-sign-out hover:cursor-pointer hover:scale-105 transition-all"
+        ></i>
+      </div>
+    </div>
+
+    <!-- Main Interaction -->
+    <div class="flex flex-col m-auto mt-3 gap-4 w-[470px] items-center">
+      <ul class="flex gap-4 text-white">
+        <li>
+          <input type="checkbox" />
+          <label for="">Recol Ford</label>
+        </li>
+        <li>
+          <input type="checkbox" />
+          <label for="">Recol Motors</label>
+        </li>
+        <li>
+          <input type="checkbox" />
+          <label for="">Recol Veículos</label>
+        </li>
+        <li>
+          <input type="checkbox" />
+          <label for="">Recol Juruá</label>
+        </li>
+      </ul>
+      <div class="flex gap-4 justify-between w-full text-white">
+        <select
+          class="bg-[#1e293b] grow rounded-md px-2 py-1"
+          name="mes"
+          id="mes"
+        >
+          <option value="01">Janeiro</option>
+          <option value="02">Fevereiro</option>
+          <option value="03">Março</option>
+          <option value="04">Abril</option>
+          <option value="05">Maio</option>
+          <option value="06">Junho</option>
+          <option value="07">Julho</option>
+          <option value="08">Agosto</option>
+          <option value="09">Setembro</option>
+          <option value="10">Outubro</option>
+          <option value="11">Novembro</option>
+          <option value="12">Dezembro</option>
+        </select>
+        <select
+          class="bg-[#1e293b] grow rounded-md px-2 py-1"
+          name="ano"
+          id="ano"
+        >
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+        </select>
+        <button class="bg-[#1e293b] grow rounded-md px-2 py-1">Inserir</button>
+        <button class="bg-[#1e293b] grow rounded-md px-2 py-1">Imprimir</button>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="flex w-full justify-center">
+      <div class="flex flex-col">
+        <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+            <div class="overflow-hidden">
+              <table class="min-w-full">
+                <thead class="bg-white border-b">
+                  <tr>
+                    <th
+                      scope="col"
+                      class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                    >
+                      Linha
+                    </th>
+                    <th
+                      scope="col"
+                      class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                    >
+                      Descricao
+                    </th>
+                    <th
+                      scope="col"
+                      class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                    >
+                      Total
+                    </th>
+                    <th
+                      scope="col"
+                      class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                    >
+                      Valor(mi)
+                    </th>
+                    <th
+                      scope="col"
+                      class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                    >
+                      ??????
+                    </th>
+                    <th
+                      scope="col"
+                      class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                    >
+                      ??????
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-gray-100 border-b">
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      1
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      Mark
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      Otto
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @mdo
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @mdo
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @mdo
+                    </td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      2
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      Jacob
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      Thornton
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @fat
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @mdo
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @mdo
+                    </td>
+                  </tr>
+                  <tr class="bg-gray-100 border-b">
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      3
+                    </td>
+                    <td
+                      colspan="2"
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center"
+                    >
+                      Larry the Bird
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @twitter
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @mdo
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @mdo
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+            <div class="overflow-hidden">
+              <table class="min-w-full">
+                <thead class="bg-white border-b">
+                  <tr>
+                    <th
+                      scope="col"
+                      class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                    >
+                      Linha
+                    </th>
+                    <th
+                      scope="col"
+                      class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                    >
+                      Descricao
+                    </th>
+                    <th
+                      scope="col"
+                      class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                    >
+                      Total
+                    </th>
+                    <th
+                      scope="col"
+                      class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                    >
+                      Valor(mi)
+                    </th>
+                    <th
+                      scope="col"
+                      class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                    >
+                      ??????
+                    </th>
+                    <th
+                      scope="col"
+                      class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                    >
+                      ??????
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-gray-100 border-b">
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      1
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      Mark
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      Otto
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @mdo
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @mdo
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @mdo
+                    </td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      2
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      Jacob
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      Thornton
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @fat
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @mdo
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @mdo
+                    </td>
+                  </tr>
+                  <tr class="bg-gray-100 border-b">
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      3
+                    </td>
+                    <td
+                      colspan="2"
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center"
+                    >
+                      Larry the Bird
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @twitter
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @mdo
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @mdo
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+            <div class="overflow-hidden">
+              <table class="min-w-full">
+                <thead class="bg-white border-b">
+                  <tr>
+                    <th
+                      scope="col"
+                      class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                    >
+                      Linha
+                    </th>
+                    <th
+                      scope="col"
+                      class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                    >
+                      Descricao
+                    </th>
+                    <th
+                      scope="col"
+                      class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                    >
+                      Total
+                    </th>
+                    <th
+                      scope="col"
+                      class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                    >
+                      Valor(mi)
+                    </th>
+                    <th
+                      scope="col"
+                      class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                    >
+                      ??????
+                    </th>
+                    <th
+                      scope="col"
+                      class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                    >
+                      ??????
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-gray-100 border-b">
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      1
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      Mark
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      Otto
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @mdo
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @mdo
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @mdo
+                    </td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      2
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      Jacob
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      Thornton
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @fat
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @mdo
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @mdo
+                    </td>
+                  </tr>
+                  <tr class="bg-gray-100 border-b">
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      3
+                    </td>
+                    <td
+                      colspan="2"
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center"
+                    >
+                      Larry the Bird
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @twitter
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @mdo
+                    </td>
+                    <td
+                      class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
+                    >
+                      @mdo
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
